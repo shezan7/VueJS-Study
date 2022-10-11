@@ -12,9 +12,12 @@
     </div>
 
     <div>
-      <h2> {{name2}} </h2>
       <div>
-        <button @click="changeName2">Change Name 2</button>
+        <h2 v-if="name2===true" class="divChange"> Shezan Al-Mahmud updated </h2>
+        <h2 v-else class="divChange2"> Shezan Al-Mahmud </h2>
+      </div>
+      <div>
+        <button @click="changeDiv">Change Div</button>
       </div>
     </div>
 
@@ -28,7 +31,7 @@ export default {
     return {
       baseMultiplier: 5,
       name: 'Shezan',
-      name2: 'Shezan'
+      name2: false
     }
   },
   methods: {
@@ -41,8 +44,8 @@ export default {
     changeName() {
       this.name = 'Al-Mahmud'
     },
-    changeName2() {
-      this.name2 = 'Shezan Al-Mahmud'
+    changeDiv() {
+      this.name2 = true
     }
   }
 }
@@ -56,5 +59,12 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.divChange {
+  color: red;
+  font-size: 50px;
+}
+.divChange2 {
+  color: blue
 }
 </style>
