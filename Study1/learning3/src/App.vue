@@ -21,6 +21,16 @@
       </div>
     </div>
 
+    <div v-if="box===true" class="chng1">a</div>
+    <button @click="chngDiv">Chng Div</button>
+
+    <div :class="{'change': chng}">Shezan</div>
+    <button @click="chng=!chng">ChngDiv</button>
+
+    <!-- <div :class="{change: chng}">Shezan</div>
+    <div :class="{change: chng}">Shezan</div>
+    <button @click="chng=!chng">ChngDiv</button> -->
+
   </div>
 </template>
 
@@ -31,7 +41,9 @@ export default {
     return {
       baseMultiplier: 5,
       name: 'Shezan',
-      name2: false
+      name2: false,
+      box: false,
+      chng: false
     }
   },
   methods: {
@@ -46,6 +58,9 @@ export default {
     },
     changeDiv() {
       this.name2 = true
+    },
+    chngDiv() {
+      this.box = true
     }
   }
 }
@@ -66,5 +81,20 @@ export default {
 }
 .divChange2 {
   color: blue
+}
+.chng1 {
+  height: 50 px;
+  width: 50 px;
+  background-color: red;
+}
+.chng2 {
+  height: 20 px;
+  width: 20 px;
+  background-color: blue;
+}
+.change {
+  background-color: red;
+  height: 200 px;
+  width: 100 px;
 }
 </style>
