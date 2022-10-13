@@ -27,9 +27,14 @@
     <div :class="{'change': chng}">Shezan</div>
     <button @click="chng=!chng">ChngDiv</button>
 
-    <!-- <div :class="{change: chng}">Shezan</div>
-    <div :class="{change: chng}">Shezan</div>
-    <button @click="chng=!chng">ChngDiv</button> -->
+    <div>
+      <h3>{{greetPart}}</h3>
+      <h4>{{studentName}}</h4>
+      <p>{{welcomeMsg}}</p>
+    </div>
+    <div>
+      <input v-model="studentName">
+    </div>
 
   </div>
 </template>
@@ -43,7 +48,10 @@ export default {
       name: 'Shezan',
       name2: false,
       box: false,
-      chng: false
+      chng: false,
+      greetPart: 'Hellooooo',
+      studentName: '',
+      welcomeMsg: 'Welcome to Brick Line'
     }
   },
   methods: {
