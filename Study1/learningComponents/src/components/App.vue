@@ -1,16 +1,15 @@
 <template>
   <div>
-    
+    <Greet></Greet>>
   </div>
 </template>
 
 <script>
+import Greet from './Greet.vue'
 export default {
   name: 'App',
-  data() {
-    return {
-      
-    }
+  components: {
+    Greet
   }
 }
 </script>
