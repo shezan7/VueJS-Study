@@ -1,12 +1,13 @@
 <template>
     <div>
-        <h2>Helloooo</h2>
+        <h2>Helloooo {{name}} from {{channelName}} </h2>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'Greet_Things'
+        name: 'Greet_Things',
+        props: ['name', 'channelName']
     }
 </script>
 

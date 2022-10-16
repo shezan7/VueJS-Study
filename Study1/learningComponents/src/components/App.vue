@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Greet_Things/>
+    <Greet_Things name="Shezan" channelName="IIT" />
+    <Greet_Things name="Mahmud" channelName="IIT" />
+    <Greet_Things :name="name" :channelName="channel" />
   </div>
 </template>
 
@@ -10,6 +12,12 @@ export default {
   name: 'App',
   components: {
     Greet_Things
+  },
+  data() {
+    return {
+      name: 'Shezan',
+      channel: 'iit'
+    }
   }
 }
 </script>
