@@ -7,6 +7,9 @@
     <Article_Things title="Article Title" :likes="50" :isPublished="true" />
 
     <Component_C />
+
+    <button @click="showPopup = true">Show PopUp</button>
+    <Pop_Up v-show="showPopup" @close="showPopup = false" />
   </div>
 </template>
 
@@ -14,17 +17,20 @@
 import Greet_Things from './Greet.vue'
 import Article_Things from './Article.vue'
 import Component_C from './ComponentC.vue'
+import Pop_Up from './PopUp.vue'
 export default {
   name: 'App',
   components: {
     Greet_Things,
     Article_Things,
-    Component_C
+    Component_C,
+    Pop_Up
 },
   data() {
     return {
       name: 'Shezan',
-      channel: 'iit'
+      channel: 'iit',
+      showPopup: false
     }
   },
   provide: {
