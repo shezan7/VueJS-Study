@@ -1,15 +1,15 @@
 <template>
   <div>
-    <Greet></Greet>>
+    <Greet_Things/>
   </div>
 </template>
 
 <script>
-import Greet from './Greet.vue'
+import Greet_Things from './Greet.vue'
 export default {
   name: 'App',
   components: {
-    Greet
+    Greet_Things
   }
 }
 </script>
