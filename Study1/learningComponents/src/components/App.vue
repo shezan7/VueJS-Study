@@ -3,24 +3,32 @@
     <Greet_Things name="Shezan" channelName="IIT" />
     <Greet_Things name="Mahmud" channelName="IIT" />
     <Greet_Things :name="name" :channelName="channel" />
+    
     <Article_Things title="Article Title" :likes="50" :isPublished="true" />
+
+    <Component_C />
   </div>
 </template>
 
 <script>
 import Greet_Things from './Greet.vue'
 import Article_Things from './Article.vue'
+import Component_C from './ComponentC.vue'
 export default {
   name: 'App',
   components: {
     Greet_Things,
-    Article_Things
+    Article_Things,
+    Component_C
 },
   data() {
     return {
       name: 'Shezan',
       channel: 'iit'
     }
+  },
+  provide: {
+    username: 'Shezan'
   }
 }
 </script>
