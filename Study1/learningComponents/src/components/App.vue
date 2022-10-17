@@ -10,6 +10,8 @@
 
     <button @click="showPopup = true">Show PopUp</button>
     <Pop_Up v-show="showPopup" @close="showPopup = false" />
+
+    <Input_Things v-model="i_name" />
   </div>
 </template>
 
@@ -18,19 +20,22 @@ import Greet_Things from './Greet.vue'
 import Article_Things from './Article.vue'
 import Component_C from './ComponentC.vue'
 import Pop_Up from './PopUp.vue'
+import Input_Things from './Input.vue'
 export default {
   name: 'App',
   components: {
     Greet_Things,
     Article_Things,
     Component_C,
-    Pop_Up
+    Pop_Up,
+    Input_Things
 },
   data() {
     return {
       name: 'Shezan',
       channel: 'iit',
-      showPopup: false
+      showPopup: false,
+      i_name: ''
     }
   },
   provide: {
