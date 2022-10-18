@@ -20,6 +20,18 @@
     <CardComponent>
       <img src="https://machinelearningmastery.com/wp-content/uploads/2016/09/icon-150x150.png" alt="">
     </CardComponent>
+
+    <CardComponent>
+      <template v-slot:header>
+        <h3>Header</h3>
+      </template>
+      <template v-slot:default>
+        <img src="https://machinelearningmastery.com/wp-content/uploads/2016/09/icon-150x150.png" alt="">
+      </template>
+      <template v-slot:footer>
+        <button>View Details</button>
+      </template>
+    </CardComponent>
   </div>
 </template>
 
