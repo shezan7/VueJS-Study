@@ -12,6 +12,14 @@
     <Pop_Up v-show="showPopup" @close="showPopup = false" />
 
     <Input_Things v-model="i_name" />
+
+    <CardComponent>Card Content</CardComponent>
+    <CardComponent>
+      <h2>Card Content</h2>
+    </CardComponent>
+    <CardComponent>
+      <img src="https://machinelearningmastery.com/wp-content/uploads/2016/09/icon-150x150.png" alt="">
+    </CardComponent>
   </div>
 </template>
 
@@ -21,6 +29,7 @@ import Article_Things from './Article.vue'
 import Component_C from './ComponentC.vue'
 import Pop_Up from './PopUp.vue'
 import Input_Things from './Input.vue'
+import CardComponent from './Card.vue'
 export default {
   name: 'App',
   components: {
@@ -28,7 +37,8 @@ export default {
     Article_Things,
     Component_C,
     Pop_Up,
-    Input_Things
+    Input_Things,
+    CardComponent
 },
   data() {
     return {
