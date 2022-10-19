@@ -3,7 +3,7 @@
     <Greet_Things name="Shezan" channelName="IIT" />
     <Greet_Things name="Mahmud" channelName="IIT" />
     <Greet_Things :name="name" :channelName="channel" />
-    
+
     <Article_Things title="Article Title" :likes="50" :isPublished="true" />
 
     <Component_C />
@@ -53,6 +53,15 @@
     <ChildStyles>
       <h5>Child Component</h5>
     </ChildStyles>
+
+    <button @click="activeTab = 'TabA'"> Tab A</button>
+    <button @click="activeTab = 'TabB'"> Tab B</button>
+    <button @click="activeTab = 'TabC'"> Tab C</button>
+    <!-- <TabA v-if="activeTab === 'TabA'" />
+    <TabB v-if="activeTab === 'TabB'" />
+    <TabC v-if="activeTab === 'TabC'" /> -->
+    <component :is="activeTab" />
+    
   </div>
 </template>
 
@@ -65,6 +74,10 @@ import Input_Things from './Input.vue'
 import CardComponent from './Card.vue'
 import NameList from './NameList.vue'
 import ChildStyles from './ChildStyles.vue'
+import TabA from './TabA.vue'
+import TabB from './TabB.vue'
+import TabC from './TabC.vue'
+
 export default {
   name: 'App',
   components: {
@@ -75,14 +88,18 @@ export default {
     Input_Things,
     CardComponent,
     NameList,
-    ChildStyles
-},
+    ChildStyles,
+    TabA,
+    TabB,
+    TabC
+  },
   data() {
     return {
       name: 'Shezan',
       channel: 'iit',
       showPopup: false,
-      i_name: ''
+      i_name: '',
+      activeTab: ''
     }
   },
   provide: {
@@ -100,6 +117,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 h5 {
   color: red;
 }
