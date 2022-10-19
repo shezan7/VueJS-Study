@@ -48,6 +48,11 @@
         {{slotProps.firstName}}
       </template>
     </NameList>
+
+    <h5>Parent Component</h5>
+    <ChildStyles>
+      <h5>Child Component</h5>
+    </ChildStyles>
   </div>
 </template>
 
@@ -59,6 +64,7 @@ import Pop_Up from './PopUp.vue'
 import Input_Things from './Input.vue'
 import CardComponent from './Card.vue'
 import NameList from './NameList.vue'
+import ChildStyles from './ChildStyles.vue'
 export default {
   name: 'App',
   components: {
@@ -68,7 +74,8 @@ export default {
     Pop_Up,
     Input_Things,
     CardComponent,
-    NameList
+    NameList,
+    ChildStyles
 },
   data() {
     return {
@@ -92,5 +99,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+h5 {
+  color: red;
 }
 </style>
